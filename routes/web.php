@@ -15,34 +15,12 @@ use App\Models\Task;
 */
 
 Route::get('/', function () {
-
-    $tasks = array(
-        array(
-            'id' => 1,
-            'name' => 'Sleep at 10.00pm',
-            'description' => 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
-            'order' => 1,
-            'end_time' => '1 Dec 20200',
-        ),
-        array(
-            'id' => 2,
-            'name' => 'lunch at 02.00pm',
-            'description' => 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
-            'order' => 2,
-            'end_time' => '16 Dec 20200',
-        ),
-        array(
-            'id' => 1,
-            'name' => 'Breakfast at 8.00am',
-            'description' => 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
-            'order' => 3,
-            'end_time' => '20 Dec 20200',
-        ),
-
-    );
-
-    return view('welcome', ["tasks"=> $tasks]);
+    return view('welcome');
 });
+
+Route::get('/secured', function(){
+    return view('secured');
+})->middleware('auth');
 
 Auth::routes();
 
