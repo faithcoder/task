@@ -47,14 +47,14 @@
                 </div>
             @endif
 
-           {{-- @foreach($tasks as $task)
+           {{-- @foreach($tasks as $tasks)
 
                     <div class="card" style="width: 18rem;">
                         <img class="card-img-top" src="https://picsum.photos/seed/picsum/200/300" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">{{$task['name']}}</h5>
-                            <p class="card-text">{{$task['description']}}</p>
-                            <a href="#" class="btn btn-primary">Ends At: {{$task['end_time']}}</a>
+                            <h5 class="card-title">{{$tasks['name']}}</h5>
+                            <p class="card-text">{{$tasks['description']}}</p>
+                            <a href="#" class="btn btn-primary">Ends At: {{$tasks['end_time']}}</a>
                         </div>
                     </div>
                 @endforeach--}}

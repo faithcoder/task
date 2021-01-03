@@ -6,20 +6,18 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
+                <br>
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{--{{ __('You are logged in!') }}--}}
-
-                    @if(count($tasks) <= 0)
-                        you don't have any task yet! You can <a href="">Create Task</a>
-                        @else
-                    @endif
+                    <div class="sub-header">
+                        <strong><h5><a href="{{route('task.create')}}">Create New Task</a></h5></strong
+                        <strong><h5><a href="{{route('task.all')}}">All Tasks</a></h5></strong>
+                    </div>
+                    <br>
+                    <div>
+                        <h3>Recent Task</h3>
+                    </div>
+                    @include('includes.tasks.list')
 
                 </div>
             </div>
